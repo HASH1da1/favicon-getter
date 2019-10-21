@@ -9,13 +9,11 @@ browser.contextMenus.create({
 });
 
 //create empty variables
-var url ="";
 var hostname = "";
 
 //function
 browser.contextMenus.onClicked.addListener((info, tab) => {
-    url = new URL(info.pageUrl);
-    hostname = url.host;
+    hostname = location.host;
 
     switch(info.menuItemId){
         case "gets":
