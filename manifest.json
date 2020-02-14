@@ -9,7 +9,6 @@
     "permissions":[
         "clipboardWrite",
         "contextMenus",
-        "menus"
     ],
     "background":{
         "scripts":["background.js"]
