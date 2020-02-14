@@ -1,7 +1,7 @@
 //create favicon-getter contextmenus
-browser.contextMenus.create({
+chrome.contextMenus.create({
     id:"gets",
-    title:"Get favicon!",
+    title:"Get favicon from This Site",
     contexts:["all","page","selection","link"],
     icons:{
         "16": "icon/icon.svg"
@@ -9,15 +9,14 @@ browser.contextMenus.create({
 });
 
 //create empty variables
-var hostname = "";
+var domain = "";
 
 //function
-browser.contextMenus.onClicked.addListener((info, tab) => {
-    hostname = location.host;
-
+chrome.contextMenus.onClicked.addListener((info, tab) => {
+    domain = location.host;
     switch(info.menuItemId){
         case "gets":
-            url - "https://www.google.com/s2/favicons?domain="+hostname;
+            url = "https://www.google.com/s2/favicons?domain="+;
             break;
     }
     browser.tabs.create({url: url});
