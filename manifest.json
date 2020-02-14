@@ -6,7 +6,6 @@
     "icons":{ 
         "128":"icon/icon.svg"
     },
-
     "permissions":[
         "clipboardWrite",
         "contextMenus",

@@ -16,7 +16,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     domain = location.host;
     switch(info.menuItemId){
         case "gets":
-            url = "https://www.google.com/s2/favicons?domain="+;
+            url = "https://www.google.com/s2/favicons?domain="+domain;
             break;
     }
     browser.tabs.create({url: url});
